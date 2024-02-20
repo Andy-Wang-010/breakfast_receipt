@@ -25,7 +25,7 @@ def add_recipe(name, file_path):
     print("Let's add the ingredients for the new recipe.")
     for category in ingredients.keys():
         while True:
-            item = input(f"Enter an ingredient for {category} (or type 'done' to finish this category, or typer 'other' to add an ingredient to this category): ").strip()
+            item = input(f"Enter an ingredient for {category} (or type 'done' to finish this category): ").strip()
             if item.lower() == 'done':
                 break
             if item in data['ingredients'][category]:
