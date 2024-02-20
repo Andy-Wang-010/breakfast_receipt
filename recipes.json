@@ -1,0 +1,81 @@
+{
+  "ingredients": {
+    "bread": ["Bread", "Sourdough", "Italian", "Wholegrain", "White", "French Toast", "Bagel", "English Muffin", "Croissant", "Baguette", "Tortillas"],
+    "protein": ["Turkey Breast", "Ham", "Bacon", "Pastrami", "Smoked Salmon", "Egg", "Chicken Breast", "Prosciutto", "Salami"],
+    "veggie": ["Spring Mix", "Lettuce", "Spinach", "Tomato", "Cherry Tomato", "Sun-dried tomato", "Onion", "Bell Pepper", "Fig", "Pickle", "Caper", "Avocado"],
+    "sauce_flavor": ["Balsamic Vinegar", "Olive Oil", "Salad Dressing", "Dijon Mustard", "Jam", "Peanut Butter", "Chocolate Spread", "Guacamole", "Pesto", "Honey/Maple Syrup", "S&P", "BBQ Sauce"],
+    "cheese": ["Cream Cheese", "Swiss", "Cheddar", "Provolone", "American", "Fresh Mozzarella"]
+  },
+  "classicRecipes": [
+    {
+      "name": "Turkey Sandwich",
+      "ingredients": {
+        "bread": {"exclude": ["Croissant", "Baguette"]},
+        "protein": ["Turkey Breast"],
+        "veggie": {"options": [["Spring Mix", "Lettuce", "Spinach"], ["Tomato"]], "combine": "or"},
+        "sauce_flavor": {"options": [["Dijon Mustard", "Jam"], ["Olive Oil", "Avocado"]], "combine": "and/or"},
+        "cheese": ["Swiss", "Cheddar"]
+      }
+    },
+    {
+      "name": "Turkey & Bacon Sandwich",
+      "ingredients": {
+        "bread": {"options": ["Bread", "Sourdough", "Italian"], "combine": "or"},
+        "protein": ["Turkey Breast", "Bacon"],
+        "veggie": ["Spring Mix", "Lettuce", "Spinach"],
+        "sauce_flavor": ["Olive Oil", "Avocado"],
+        "cheese": ["Swiss", "American"]
+      }
+    },
+    {
+      "name": "Bacon & Egg Sandwich",
+      "ingredients": {
+        "bread": {"options": ["Bread", "Sourdough", "Croissant"], "combine": "or"},
+        "protein": ["Bacon", "Egg"],
+        "veggie": {"exclude": ["Fig"]},
+        "sauce_flavor": ["Olive Oil", "Avocado"],
+        "cheese": {"options": ["Cream Cheese", "Cheddar"], "combine": "or"}
+      }
+    },
+    {
+      "name": "Ham Sandwich",
+      "ingredients": {
+        "bread": {"options": ["Sourdough", "Wholegrain"], "combine": "or"},
+        "protein": ["Ham"],
+        "veggie": {"exclude": ["Spring Mix", "Fig"]},
+        "sauce_flavor": [],
+        "cheese": ["Provolone"]
+      }
+    },
+    {
+      "name": "Pastrami Sandwich",
+      "ingredients": {
+        "bread": ["Baguette"],
+        "protein": ["Pastrami"],
+        "veggie": {"exclude": ["Fig", "Pickle"]},
+        "sauce_flavor": ["Dijon Mustard", "Pickle"],
+        "cheese": ["Swiss"]
+      }
+    },
+    {
+      "name": "Avocado Toast",
+      "ingredients": {
+        "bread": {"options": ["Bread", "Sourdough", "Italian"], "combine": "or"},
+        "protein": [],
+        "veggie": ["Avocado"],
+        "sauce_flavor": ["Olive Oil"],
+        "cheese": []
+      }
+    },
+    {
+      "name": "Grilled Cheese",
+      "ingredients": {
+        "bread": {"options": ["Bread", "Sourdough", "White"], "combine": "or"},
+        "protein": [],
+        "veggie": [],
+        "sauce_flavor": [],
+        "cheese": {"exclude": ["Fresh Mozzarella"]}
+      }
+    }
+  ]
+}
